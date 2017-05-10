@@ -93,6 +93,15 @@ function calculateWinner (squares) {
 }
 
 class Game extends React.Component {
+  constructor () {
+    this.state = {
+      history: [{
+        squares: Array(9).fill(null)
+      }],
+      xIsNext: true
+    }
+  }
+
   render () {
     return (
       <div className='game'>
